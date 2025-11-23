@@ -239,75 +239,46 @@
             gap: 12px;
         }
 
-        /* Footer */
-        footer {
-            background: var(--primary-dark);
-            padding: 50px 0 20px;
-            margin-top: 50px;
-        }
+       .footer-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
 
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
+.footer-column {
+    max-width: 500px;
+}
 
-        .footer-column h3 {
-            color: var(--accent);
-            margin-bottom: 20px;
-            font-size: 1.3rem;
-        }
+.footer-column h3 {
+    margin-bottom: 15px;
+}
 
-        .footer-links {
-            list-style: none;
-        }
+.footer-column p {
+    margin-bottom: 20px;
+}
 
-        .footer-links li {
-            margin-bottom: 10px;
-        }
+.social-links {
+    justify-content: center;
+}
 
-        .footer-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: var(--transition);
-        }
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 20px 0;
+}
 
-        .footer-links a:hover {
-            color: var(--accent);
-            padding-left: 5px;
-        }
+.footer-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: var(--transition);
+}
 
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--text);
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background: var(--accent);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
+.footer-links a:hover {
+    color: var(--accent);
+}
 
         /* Responsive Styles */
         @media (max-width: 768px) {
@@ -407,7 +378,7 @@
                 </a>
 
                 <!-- TechStack Detector Card -->
-                <a href="techstack.html" class="extension-card">
+                <a href="website-techstack-detector.html" class="extension-card">
                     <div class="extension-img">
                         <i class="fas fa-code"></i>
                     </div>
@@ -425,7 +396,7 @@
                 </a>
 
                 <!-- Water Reminder Card -->
-                <a href="water-reminder.html" class="extension-card">
+                <a href="daily-water-reminder.html" class="extension-card">
                     <div class="extension-img">
                         <i class="fas fa-tint"></i>
                     </div>
@@ -445,44 +416,30 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>PlugInnova</h3>
-                    <p>Developing innovative Chrome extensions to enhance your browsing experience and productivity.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-chrome"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Extensions</h3>
-                    <ul class="footer-links">
-                        <li><a href="browsenotes.html">BrowseNotes</a></li>
-                        <li><a href="techstack.html">TechStack Detector</a></li>
-                        <li><a href="water-reminder.html">Daily Water Reminder</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Documentation</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
+<!-- Footer -->
+<footer id="contact">
+    <div class="container">
+        <div class="footer-content" style="text-align: center; display: flex; flex-direction: column; align-items: center; gap: 30px;">
+            <div class="footer-column" style="max-width: 500px;">
+                <h3 style="margin-bottom: 15px;">PlugInnova</h3>
+                <p style="margin-bottom: 20px;">Developing innovative Chrome extensions to enhance your browsing experience and productivity.</p>
+                <div class="social-links" style="justify-content: center;">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-chrome"></i></a>
                 </div>
             </div>
-            <div class="copyright">
-                <p>&copy; 2023 PlugInnova. All rights reserved.</p>
+            
+            <div class="footer-links" style="display: flex; justify-content: center; gap: 30px; margin: 20px 0;">
+                <a href="#" style="color: var(--text-secondary); text-decoration: none; transition: var(--transition);">Privacy Policy</a>
             </div>
         </div>
-    </footer>
-
+        <div class="copyright">
+            <p>&copy; 2023 PlugInnova. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
     <script>
         // Mobile Menu Toggle
         document.querySelector('.mobile-menu').addEventListener('click', function() {
