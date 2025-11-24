@@ -39,6 +39,28 @@
             padding: 0 20px;
         }
 
+
+
+        .video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
         /* Header Styles */
         header {
             padding: 20px 0;
@@ -424,6 +446,24 @@
                         <p>Daily Water Reminder is a beautiful Chrome extension designed to help you maintain proper hydration throughout your day. Staying hydrated is essential for focus, energy, and overall health, and this extension makes it easy to track your water intake and receive timely reminders to drink water.</p>
                         <p>This extension runs locally in your browser and helps you build healthy hydration habits with customizable reminders, progress tracking, and achievement systems.</p>
                     </div>
+
+                    <div class="content-section">
+    <h2>How It Works - Video Tutorial</h2>
+    <div class="video-container">
+        <iframe 
+            width="100%" 
+            height="400" 
+            src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+            title="Daily Water Reminder - Chrome Extension Tutorial" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    <p style="margin-top: 15px; text-align: center; color: var(--text-secondary);">
+        Watch this short tutorial to learn how to set up and use the Daily Water Reminder extension.
+    </p>
+</div>
 
                     <div class="content-section">
                         <h2>Key Features</h2>
