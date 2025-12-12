@@ -219,14 +219,27 @@
             margin-bottom: 10px;
             font-weight: 700;
         }
+.game-description {
+    color: #636e72;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    /* Keep a consistent height */
+    height: 65px;
+    overflow: hidden;
+    position: relative;
+    line-height: 1.4;
+}
 
-        .game-description {
-            color: #636e72;
-            font-size: 0.95rem;
-            margin-bottom: 15px;
-            height: 60px;
-            overflow: hidden;
-        }
+/* Add a fade-out effect at the bottom */
+.game-description::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to bottom, transparent, white);
+}
 
         .game-meta {
             display: flex;
