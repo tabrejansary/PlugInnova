@@ -214,23 +214,35 @@
             padding: 1.5rem;
         }
 
-        .game-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
+      .game-title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    /* Add these lines to limit title to 2 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+    min-height: 3.6rem; /* 2 lines * 1.8rem line height */
+}
+
 .game-description {
     color: #636e72;
     font-size: 0.95rem;
     margin-bottom: 15px;
-    /* Keep a consistent height */
-    height: 65px;
+    /* Increase height and add multi-line clamp */
+    height: 72px; /* Increased from 65px */
     overflow: hidden;
     position: relative;
     line-height: 1.4;
+    /* Alternative: Use line clamp for better control */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
 }
 
-/* Add a fade-out effect at the bottom */
+/* Keep the fade-out effect but adjust it */
 .game-description::after {
     content: '';
     position: absolute;
@@ -239,6 +251,13 @@
     width: 100%;
     height: 20px;
     background: linear-gradient(to bottom, transparent, white);
+    /* Only show when text is actually clipped */
+    display: none;
+}
+
+/* Show fade only when text overflows */
+.game-description:has(+ .game-meta)::after {
+    display: block;
 }
 
         .game-meta {
